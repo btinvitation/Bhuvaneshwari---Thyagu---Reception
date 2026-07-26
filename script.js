@@ -40,6 +40,7 @@ window.addEventListener("load", () => {
 // Premium Envelope Animation
 // ===========================
 
+<section id="book-section">
 const envelope = document.querySelector(".envelope");
 const flap = document.querySelector(".envelope-top");
 const seal = document.querySelector(".wax-seal");
