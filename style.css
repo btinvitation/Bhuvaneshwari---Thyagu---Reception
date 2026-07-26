@@ -171,6 +171,8 @@ section{
 
 #book-section{
     background:#efe7da;
+    display:none;
+    opacity:1;
 }
 
 .book{
