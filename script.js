@@ -36,29 +36,52 @@ window.addEventListener("load", () => {
 // Envelope
 // ==============================
 
-const envelope=document.querySelector(".envelope");
+// ===========================
+// Premium Envelope Animation
+// ===========================
 
-const book=document.getElementById("book-section");
+const envelope = document.querySelector(".envelope");
+const flap = document.querySelector(".envelope-top");
+const seal = document.querySelector(".wax-seal");
+const landing = document.getElementById("landing");
+const book = document.getElementById("book-section");
 
-book.style.display="none";
+book.style.display = "none";
 
-envelope.addEventListener("click",()=>{
+envelope.addEventListener("click", () => {
 
-    envelope.style.transform="scale(.92) rotateX(18deg)";
+    // Glow effect
+    seal.style.boxShadow = "0 0 45px rgba(212,175,55,.9)";
 
-    envelope.style.transition=".7s";
+    // Break seal
+    seal.style.transform = "translateX(-50%) scale(0.85)";
+    seal.style.transition = ".4s";
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
-        envelope.parentElement.style.display="none";
+        // Open flap
+        flap.style.transform = "rotateX(180deg)";
 
-        book.style.display="flex";
+    }, 300);
+
+    setTimeout(() => {
+
+        landing.style.opacity = "0";
+        landing.style.transition = "1s";
+
+    }, 900);
+
+    setTimeout(() => {
+
+        landing.style.display = "none";
+
+        book.style.display = "flex";
 
         book.scrollIntoView({
-            behavior:"smooth"
+            behavior: "smooth"
         });
 
-    },700);
+    }, 1700);
 
 });
 
