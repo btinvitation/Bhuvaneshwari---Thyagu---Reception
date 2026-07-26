@@ -321,3 +321,180 @@ section{
 }
 
 }
+
+/* ===========================
+   PREMIUM LANDING
+=========================== */
+
+#landing{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#faf6ef,#f3e7d8);
+}
+
+/* Gold glow */
+
+.gold-glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(212,175,55,.30),
+    transparent 70%);
+    filter:blur(40px);
+    animation:glow 4s ease-in-out infinite;
+}
+
+@keyframes glow{
+
+0%,100%{
+transform:scale(1);
+opacity:.7;
+}
+
+50%{
+transform:scale(1.2);
+opacity:1;
+}
+
+}
+
+/* ===========================
+   ENVELOPE
+=========================== */
+
+.envelope-wrapper{
+    position:relative;
+    z-index:2;
+}
+
+.envelope{
+    width:340px;
+    height:230px;
+    position:relative;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.envelope:hover{
+    transform:translateY(-8px);
+}
+
+/* Bottom */
+
+.envelope-body{
+
+position:absolute;
+bottom:0;
+width:100%;
+height:170px;
+
+background:#fffdf9;
+
+border-radius:0 0 14px 14px;
+
+box-shadow:0 25px 45px rgba(0,0,0,.18);
+
+}
+
+/* Top flap */
+
+.envelope-top{
+
+position:absolute;
+
+top:0;
+
+width:100%;
+height:170px;
+
+background:#efe2cf;
+
+clip-path:polygon(0 0,50% 65%,100% 0);
+
+transform-origin:top;
+
+transition:.8s;
+
+}
+
+/* Wax Seal */
+
+.wax-seal{
+
+position:absolute;
+
+left:50%;
+top:100px;
+
+transform:translateX(-50%);
+
+width:82px;
+height:82px;
+
+border-radius:50%;
+
+background:#7b1023;
+
+border:5px solid #d4af37;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:4px;
+
+font-size:20px;
+
+font-weight:bold;
+
+color:#d4af37;
+
+box-shadow:0 0 25px rgba(212,175,55,.35);
+
+z-index:5;
+
+}
+
+/* Instruction */
+
+.tap-text{
+
+position:absolute;
+
+bottom:-42px;
+
+width:100%;
+
+text-align:center;
+
+letter-spacing:4px;
+
+font-size:14px;
+
+text-transform:uppercase;
+
+color:#7b1023;
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+opacity:.5;
+}
+
+50%{
+opacity:1;
+}
+
+}
